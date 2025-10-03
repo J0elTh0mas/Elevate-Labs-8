@@ -1,0 +1,22 @@
+When using these tools it can be understood that TunnelBear is secure VPN that can be used freely. The only issue with this VPN is that the free plan only provides 2GB of free data. This VPN initally checked using 
+the website Whatsmyipaddress, in which it could be seen that the public facing IP was cchanged from the inital one taht was there on the PC. Then to check the if theres a leak in the VPN tunnel we proceeded to use
+Wireshark to see if the packets were encrypted and also the website Browserleak.com/DNS, this helped in understanding if there was leak in the tunnel which there wasnt. Looking at the speed tests that were done it
+could be understood that there was major loss in terms of speed but this varies initally based on your bandwidth this was however not a problem with our system as the chrome browser was still considered to be pretty
+quick. That being said the loss in speed can be explain when looking at the working of VPNs.
+
+Working of VPNs
+The IP packets are initally encrypted and the passed along another encrypted connection, this connection can be said to be closed tunnel in which no one else can eavesdrop or view these packets. This tuneel will be 
+established simlar to the TCP handshake to make a connected secure channel. The packets will also be encapsulated and then the headers will show the VPN headers. This tunnel connects to the VPN server this server 
+will be the intermediatary, the server will recieve the packets and then proceed to decrypt the packets and then proceed to send the original packets to the intended server. The responses will be sent back to the 
+server and then from there it encrypts the packet and then send the encrypted packet back to the initial system. 
+
+Benefits of using a VPN:
+- The confidentiality of the data is ensured.
+- The integrity of the packets can be assured.
+- You can bypass country regualtions that make it so that you can not access servers that the country deem not be fit or region-locked content.
+- Anonmity is assured because it masks the IP of the user.
+
+Limitations of using a VPN:
+- The VPN server can be considered vulnerbale. The decryption that happens at this point can considered to be vulenrable as you have to trust that the VPN server transmits the packets safely
+- There is only one routing route unlike TOR which contains multiple nodes.
+- The speed can be drastically impacted as the encryption and the distance that the packets need to travel can hinder the speed massively.
